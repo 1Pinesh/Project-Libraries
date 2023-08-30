@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id= "library-container-blur" class="library-container">
+    <div id="library-container-blur" class="library-container">
       <section class="header">
         <div class="logo">Library</div>
         <div class="Add-section">
           <button id="add-btn">+</button>
         </div>
       </section>
-  
+
       <section class="main-content">
         <table id="Books-table">
-          <td>Title</th>
-          <td>Author</th>
-          <td>Page</th>
+          <td>Title</td>
+          <td>Author</td>
+          <td>Page</td>
           <td>Status</td>
         </table>
       </section>
@@ -27,24 +27,44 @@
 
     <div id="addBook" class="book-inform-section">
       <form name="Book">
+        <h2>Add A Book</h2>
         <div class="bookInputs">
           <label for="Title">Book Title</label>
-          <input type="text" name="bkTitle" id="bkTitle" placeholder="Book Title" required>
+          <input
+            type="text"
+            name="bkTitle"
+            id="bkTitle"
+            placeholder="Book Title"
+            required
+          />
         </div>
         <div class="bookInputs">
           <label for="Author">Book Author</label>
-          <input type="text" name="bkAuthor" id="bkAuthor" placeholder="Book Author" required>
+          <input
+            type="text"
+            name="bkAuthor"
+            id="bkAuthor"
+            placeholder="Book Author"
+            required
+          />
         </div>
         <div class="bookInputs">
           <label for="Pages">Total Number Of Pages</label>
-          <input type="number" name="bkPage" id="bkPage" placeholder="Book Page" required>
+          <input
+            type="number"
+            name="bkPage"
+            id="bkPage"
+            placeholder="Book Page"
+            required
+          />
         </div>
         <div class="bookInputs">
-          <label for="Pages">Status
-            <input type="checkbox" name="bkStatus" id="bkStatus" >
+          <label for="Pages"
+            >Status
+            <input type="checkbox" name="bkStatus" id="bkStatus" />
           </label>
         </div>
-        <input type="submit">
+        <input id="submitBtn" type="button" value="Submit" />
       </form>
     </div>
     <script src="Javascript/books.js"></script>

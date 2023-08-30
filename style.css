@@ -52,14 +52,46 @@ body {
 .book-inform-section {
   position: absolute;
   visibility: hidden;
+  top: 50%;
+  border-radius: 20px;
+}
+.book-inform-section h2 {
+  text-align: center;
+}
+.book-inform-section {
+  border: 1px solid black;
+}
+.book-inform-section form {
+  margin: 0 5px 0 5px;
 }
 
+.book-inform-section .bookInputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#submitBtn {
+  width: 40%;
+  height: 35px;
+  margin-top: 25px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 20px;
+}
+
+#submitBtn:hover {
+  transition: 0.5s ease-in;
+  box-shadow: 5px 3px black;
+}
+
+/* Toggles the boox infor page to show up */
 .active {
-  width: 200px;
+  width: 300px;
+  height: 300px;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  background-color: wheat;
+  background-color: white;
   visibility: unset;
 }
 
@@ -77,11 +109,14 @@ body {
 /* Table */
 #Books-table {
   width: 56%;
+  height: 19em;
   display: flex;
   font-size: 30px;
   justify-content: center;
   border: 1px solid;
+  margin-bottom: 10px;
 }
+
 #Books-table tr {
   display: grid;
   gap: 50px;

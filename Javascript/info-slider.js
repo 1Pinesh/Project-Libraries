@@ -9,5 +9,5 @@ const addBookCon = document.getElementById("addBook");
 
 plusBtn.addEventListener("click", () => {
   addBookCon.classList.toggle("active");
-  mainCon.classList.toggle("conBlur");
+  mainCon.classList.add("conBlur");
 });
