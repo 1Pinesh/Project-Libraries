@@ -48,6 +48,12 @@ body {
   transform: scale(1.2);
 }
 
+.active {
+  background-color: red;
+}
+
+/* Book-info content */
+
 /* Main content - container */
 .main-content {
   display: flex;
