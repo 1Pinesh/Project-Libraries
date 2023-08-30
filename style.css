@@ -17,3 +17,29 @@ body {
   padding: 12px 0 12px 0;
   font-size: 30px;
 }
+
+/* Login - Button */
+#login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  outline: none;
+  background: none;
+}
+
+#login-btn {
+  padding: 12px 0 12px 0;
+  width: 70px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+/* Login-button effects */
+#login-btn:hover {
+  background: black;
+  color: white;
+  font-weight: 800;
+  transition: 0.5s ease-in;
+  transform: scale(1.2);
+}
