@@ -2,15 +2,14 @@
 const myLibrary = [];
 
 // Stored Book information
-function Book(title, authur, page, publishedDate, readStatus) {
+function Book(title, authur, page, readStatus) {
   this.title = title;
   this.authur = authur;
   this.page = page;
-  this.publishedDate = publishedDate;
   this.readStatus = readStatus;
 }
 // function to add  book to the array list
 function addBookToLibrary() {
-  const newBook = Book(title, authur, page, publishedDate, readStatus);
+  const newBook = Book(title, authur, page, readStatus);
   myLibrary.push(newBook);
 }

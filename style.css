@@ -18,8 +18,13 @@ body {
   font-size: 30px;
 }
 
-/* Login - Button */
-#login-btn {
+/* Add-section */
+.Add-section {
+  padding: 12px 0 12px 0;
+}
+
+/* add - Button */
+#add-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,18 +33,38 @@ body {
   background: none;
 }
 
-#login-btn {
-  padding: 12px 0 12px 0;
+#add-btn {
   width: 70px;
   height: 30px;
   border-radius: 30px;
 }
 
-/* Login-button effects */
-#login-btn:hover {
+/* add-button effects */
+#add-btn:hover {
   background: black;
   color: white;
   font-weight: 800;
   transition: 0.5s ease-in;
   transform: scale(1.2);
+}
+
+/* Main content - container */
+.main-content {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}
+
+/* Table */
+#Books-table {
+  width: 56%;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  border: 1px solid;
+}
+#Books-table tr {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
 }
