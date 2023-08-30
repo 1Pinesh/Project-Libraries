@@ -48,11 +48,24 @@ body {
   transform: scale(1.2);
 }
 
-.active {
-  background-color: red;
+/* Book-info content */
+.book-inform-section {
+  position: absolute;
+  visibility: hidden;
 }
 
-/* Book-info content */
+.active {
+  width: 200px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: wheat;
+  visibility: unset;
+}
+
+.conBlur {
+  filter: blur(2px);
+}
 
 /* Main content - container */
 .main-content {
