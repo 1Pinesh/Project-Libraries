@@ -109,8 +109,6 @@ body {
 /* Table */
 #Books-table {
   width: 56%;
-  height: 19em;
-  display: flex;
   font-size: 30px;
   justify-content: center;
   border: 1px solid;
@@ -121,4 +119,14 @@ body {
   display: grid;
   gap: 50px;
   grid-template-columns: 2fr 2fr 2fr 1fr;
+  justify-content: center;
+}
+
+tbody {
+  margin: 10px;
+  height: 1px;
+}
+
+.main-content {
+  height: 21em;
 }

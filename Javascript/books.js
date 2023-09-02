@@ -33,9 +33,8 @@ function addBookToLibrary() {
 function populateTable() {
   const table = document.getElementById("Books-table");
 
-  // Clear existing rows
-  while (table.firstChild) {
-    table.removeChild(table.firstChild);
+  while (table.children.length > 1) {
+    table.removeChild(table.children[1]);
   }
 
   for (let i = 0; i < myLibrary.length; i++) {
@@ -46,7 +45,7 @@ function populateTable() {
     row.appendChild(titleCol);
 
     const authorCol = document.createElement("td");
-    authorCol.textContent = myLibrary[i].author;
+    authorCol.textContent = myLibrary[i].authur;
     row.appendChild(authorCol);
 
     const pageCol = document.createElement("td");
