@@ -53,13 +53,14 @@ function populateTable() {
     row.appendChild(pageCol);
 
     const readStatusCol = document.createElement("td");
-    readStatusCol.textContent = myLibrary[i].readStatus;
 
-    if (myLibrary[i].readStatus) {
-      readStatusCol.textContent = "read";
-    } else {
-      readStatusCol.textContent = "Not read";
-    }
+    const checkedButton = document.createElement("input");
+    checkedButton.type = "checkbox";
+    checkedButton.id = "readStatusCheckBox";
+
+    checkedButton.checked = myLibrary[i].readStatus;
+
+    readStatusCol.appendChild(checkedButton);
 
     row.appendChild(readStatusCol);
 
