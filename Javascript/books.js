@@ -25,7 +25,7 @@ function addBookToLibrary() {
     bTitle.value,
     bAuthur.value,
     bPage.value,
-    bStatus.value
+    bStatus.checked
   );
   myLibrary.push(newBook);
 }
@@ -54,6 +54,13 @@ function populateTable() {
 
     const readStatusCol = document.createElement("td");
     readStatusCol.textContent = myLibrary[i].readStatus;
+
+    if (myLibrary[i].readStatus) {
+      readStatusCol.textContent = "read";
+    } else {
+      readStatusCol.textContent = "Not read";
+    }
+
     row.appendChild(readStatusCol);
 
     table.appendChild(row);

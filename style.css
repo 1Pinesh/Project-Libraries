@@ -122,11 +122,15 @@ body {
   justify-content: center;
 }
 
+#Books-table td {
+  text-align: center;
+}
+
 tbody {
   margin: 10px;
   height: 1px;
 }
 
 .main-content {
-  height: 21em;
+  height: 690px;
 }
