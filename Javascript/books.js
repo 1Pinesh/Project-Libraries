@@ -30,6 +30,7 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
 }
 
+// Function populate Table
 function populateTable() {
   const table = document.getElementById("Books-table");
 
@@ -86,12 +87,15 @@ function populateTable() {
     table.appendChild(row);
   }
 }
+// delete function
 function removeBook(bookIndex) {
   if (bookIndex >= 0 && bookIndex < myLibrary.length) {
     myLibrary.splice(bookIndex, 1);
     populateTable();
   }
 }
+
+// Submit button
 submitBtn.addEventListener("click", () => {
   console.log(bTitle.value, bAuthur.value, bPage.value, bStatus.value);
   addBookToLibrary();
