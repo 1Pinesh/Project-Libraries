@@ -40,23 +40,27 @@ function populateTable() {
   for (let i = 0; i < myLibrary.length; i++) {
     const row = document.createElement("tr");
 
+    // Title Column
     const titleCol = document.createElement("td");
     titleCol.textContent = myLibrary[i].title;
     row.appendChild(titleCol);
 
+    // Author Column
     const authorCol = document.createElement("td");
     authorCol.textContent = myLibrary[i].authur;
     row.appendChild(authorCol);
 
+    // Page Column
     const pageCol = document.createElement("td");
     pageCol.textContent = myLibrary[i].page;
     row.appendChild(pageCol);
 
+    // Check status Column
     const readStatusCol = document.createElement("td");
 
     const checkedButton = document.createElement("input");
     checkedButton.type = "checkbox";
-    checkedButton.id = "readStatusCheckBox";
+    checkedButton.classList = "readStatusCheckBox";
 
     checkedButton.checked = myLibrary[i].readStatus;
 
@@ -64,10 +68,30 @@ function populateTable() {
 
     row.appendChild(readStatusCol);
 
+    //delete Column
+    const deleteCol = document.createElement("td");
+    const deleteBtn = document.createElement("button");
+    deleteBtn.id = "btnDelete";
+    deleteBtn.textContent = "X";
+
+    deleteCol.appendChild(deleteBtn);
+
+    deleteBtn.addEventListener("click", () => {
+      removeBook(i);
+    });
+
+    row.appendChild(deleteCol);
+
+    // adding to table
     table.appendChild(row);
   }
 }
-
+function removeBook(bookIndex) {
+  if (bookIndex >= 0 && bookIndex < myLibrary.length) {
+    myLibrary.splice(bookIndex, 1);
+    populateTable();
+  }
+}
 submitBtn.addEventListener("click", () => {
   console.log(bTitle.value, bAuthur.value, bPage.value, bStatus.value);
   addBookToLibrary();

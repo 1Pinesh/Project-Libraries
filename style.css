@@ -98,6 +98,20 @@ body {
 .conBlur {
   filter: blur(2px);
 }
+/* Delete Button */
+#btnDelete {
+  width: 70px;
+  height: 25px;
+  border-radius: 10px;
+  font-weight: 800;
+  transition: 0.2s ease-in;
+}
+
+#btnDelete:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-2px);
+}
 
 /* Main content - container */
 .main-content {
@@ -118,8 +132,9 @@ body {
 #Books-table tr {
   display: grid;
   gap: 50px;
-  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
   justify-content: center;
+  padding-right: 10px;
 }
 
 #Books-table td {
